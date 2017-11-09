@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Turorudi\Lab_7\Topmodule.ncd
+OUTFILE=D:\Turorudi\Lab_7\Topmodule.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4tq144
+WORKINGDIR=D:\Turorudi\Lab_7
+LICENSE=ISE
+USER_INFO=174142289_1777490381_210623306_606

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/Turorudi/Lab8/lnkolab7/gcd1_test_isim_beh.exe" -prj "D:/Turorudi/Lab8/lnkolab7/gcd1_test_beh.prj" "work.gcd1_test" "work.glbl" 

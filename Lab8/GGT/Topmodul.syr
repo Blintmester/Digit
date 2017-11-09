@@ -1,0 +1,523 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Topmodul.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Topmodul.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Topmodul"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-tq144
+
+---- Source Options
+Top Module Name                    : Topmodul
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../LIP_4digit.v" in library work
+Compiling verilog file "Steuerung.v" in library work
+Module <LIP_4digit> compiled
+Compiling verilog file "Topmodul.v" in library work
+Module <GGT> compiled
+Module <Topmodul> compiled
+No errors in compilation
+Analysis of file <"Topmodul.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Topmodul> in library <work>.
+
+Analyzing hierarchy for module <GGT> in library <work> with parameters.
+	EXCH = "100"
+	IDLE = "000"
+	INITA = "001"
+	INITB = "010"
+	READY = "110"
+	SUB = "101"
+	TEST = "011"
+
+Analyzing hierarchy for module <LIP_4digit> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Topmodul>.
+Module <Topmodul> is correct for synthesis.
+ 
+Analyzing module <GGT> in library <work>.
+	EXCH = 3'b100
+	IDLE = 3'b000
+	INITA = 3'b001
+	INITB = 3'b010
+	READY = 3'b110
+	SUB = 3'b101
+	TEST = 3'b011
+Module <GGT> is correct for synthesis.
+ 
+Analyzing module <LIP_4digit> in library <work>.
+Module <LIP_4digit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <GGT>.
+    Related source file is "Steuerung.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 76 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <state>.
+    Found 8-bit comparator equal for signal <aeqb>.
+    Found 8-bit comparator greater for signal <agtb>.
+    Found 8-bit register for signal <aout>.
+    Found 8-bit subtractor for signal <aout$addsub0000> created at line 105.
+    Found 8-bit comparator less for signal <bgta>.
+    Found 8-bit register for signal <bout>.
+    Found 7-bit register for signal <state>.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <GGT> synthesized.
+
+
+Synthesizing Unit <LIP_4digit>.
+    Related source file is "../LIP_4digit.v".
+    Found 16x7-bit ROM for signal <segment>.
+    Found 4-bit register for signal <dig>.
+    Found 14-bit up counter for signal <div>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <LIP_4digit> synthesized.
+
+
+Synthesizing Unit <Topmodul>.
+    Related source file is "Topmodul.v".
+Unit <Topmodul> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 1
+ 14-bit up counter                                     : 1
+# Registers                                            : 4
+ 4-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 1
+ 14-bit up counter                                     : 1
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <state_4> (without init value) has a constant value of 0 in block <GGT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <state_5> (without init value) has a constant value of 0 in block <GGT>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Topmodul> ...
+
+Optimizing unit <GGT> ...
+
+Optimizing unit <LIP_4digit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Topmodul, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Topmodul.ngr
+Top Level Output File Name         : Topmodul
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 113
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 13
+#      LUT2                        : 9
+#      LUT2_L                      : 1
+#      LUT3                        : 21
+#      LUT4                        : 16
+#      MUXCY                       : 20
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 22
+# FlipFlops/Latches                : 39
+#      FDR                         : 18
+#      FDRE                        : 19
+#      FDS                         : 1
+#      FDSE                        : 1
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 23
+#      IBUF                        : 11
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250etq144-4 
+
+ Number of Slices:                       33  out of   2448     1%  
+ Number of Slice Flip Flops:             39  out of   4896     0%  
+ Number of 4 input LUTs:                 65  out of   4896     1%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    108    23%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 21    |
+clk16M                             | BUFGP                  | 18    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.050ns (Maximum Frequency: 198.020MHz)
+   Minimum input arrival time before clock: 3.473ns
+   Maximum output required time after clock: 7.890ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.050ns (frequency: 198.020MHz)
+  Total number of paths / destination ports: 115 / 21
+-------------------------------------------------------------------------
+Delay:               5.050ns (Levels of Logic = 10)
+  Source:            MeinGGT/aout_0 (FF)
+  Destination:       MeinGGT/aout_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: MeinGGT/aout_0 to MeinGGT/aout_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.591   0.666  MeinGGT/aout_0 (MeinGGT/aout_0)
+     LUT2:I1->O            1   0.704   0.000  MeinGGT/Msub_aout_addsub0000_lut<0> (MeinGGT/Msub_aout_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  MeinGGT/Msub_aout_addsub0000_cy<0> (MeinGGT/Msub_aout_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  MeinGGT/Msub_aout_addsub0000_cy<1> (MeinGGT/Msub_aout_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  MeinGGT/Msub_aout_addsub0000_cy<2> (MeinGGT/Msub_aout_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  MeinGGT/Msub_aout_addsub0000_cy<3> (MeinGGT/Msub_aout_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  MeinGGT/Msub_aout_addsub0000_cy<4> (MeinGGT/Msub_aout_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  MeinGGT/Msub_aout_addsub0000_cy<5> (MeinGGT/Msub_aout_addsub0000_cy<5>)
+     MUXCY:CI->O           0   0.059   0.000  MeinGGT/Msub_aout_addsub0000_cy<6> (MeinGGT/Msub_aout_addsub0000_cy<6>)
+     XORCY:CI->O           1   0.804   0.455  MeinGGT/Msub_aout_addsub0000_xor<7> (MeinGGT/aout_addsub0000<7>)
+     LUT3:I2->O            1   0.704   0.000  MeinGGT/aout_mux0000<7>1 (MeinGGT/aout_mux0000<7>)
+     FDRE:D                    0.308          MeinGGT/aout_7
+    ----------------------------------------
+    Total                      5.050ns (3.929ns logic, 1.121ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk16M'
+  Clock period: 4.262ns (frequency: 234.632MHz)
+  Total number of paths / destination ports: 165 / 22
+-------------------------------------------------------------------------
+Delay:               4.262ns (Levels of Logic = 2)
+  Source:            MeinLIP/div_11 (FF)
+  Destination:       MeinLIP/dig_3 (FF)
+  Source Clock:      clk16M rising
+  Destination Clock: clk16M rising
+
+  Data Path: MeinLIP/div_11 to MeinLIP/dig_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  MeinLIP/div_11 (MeinLIP/div_11)
+     LUT4:I0->O            1   0.704   0.499  MeinLIP/rate5 (MeinLIP/rate5)
+     LUT4:I1->O            4   0.704   0.587  MeinLIP/rate30 (MeinLIP/rate)
+     FDRE:CE                   0.555          MeinLIP/dig_0
+    ----------------------------------------
+    Total                      4.262ns (2.554ns logic, 1.708ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 73 / 56
+-------------------------------------------------------------------------
+Offset:              3.473ns (Levels of Logic = 2)
+  Source:            bt<1> (PAD)
+  Destination:       MeinGGT/bout_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: bt<1> to MeinGGT/bout_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.218   1.243  bt_1_IBUF (bt_1_IBUF)
+     LUT3:I0->O            1   0.704   0.000  MeinGGT/bout_mux0000<7>1 (MeinGGT/bout_mux0000<7>)
+     FDRE:D                    0.308          MeinGGT/bout_7
+    ----------------------------------------
+    Total                      3.473ns (2.230ns logic, 1.243ns route)
+                                       (64.2% logic, 35.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk16M'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.393ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       MeinLIP/div_13 (FF)
+  Destination Clock: clk16M rising
+
+  Data Path: rst to MeinLIP/div_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   1.218   1.264  rst_IBUF (rst_IBUF)
+     FDRE:R                    0.911          MeinLIP/dig_0
+    ----------------------------------------
+    Total                      3.393ns (2.129ns logic, 1.264ns route)
+                                       (62.7% logic, 37.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 140 / 7
+-------------------------------------------------------------------------
+Offset:              7.890ns (Levels of Logic = 4)
+  Source:            MeinGGT/state_6 (FF)
+  Destination:       seg_n<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: MeinGGT/state_6 to seg_n<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.591   0.995  MeinGGT/state_6 (MeinGGT/state_6)
+     LUT4:I0->O            1   0.704   0.000  MeinLIP/value<3>1 (MeinLIP/value<3>1)
+     MUXF5:I1->O           7   0.321   0.883  MeinLIP/value<3>_f5 (MeinLIP/value<3>)
+     LUT4:I0->O            1   0.704   0.420  seg_n<0>1 (seg_n_0_OBUF)
+     OBUF:I->O                 3.272          seg_n_0_OBUF (seg_n<0>)
+    ----------------------------------------
+    Total                      7.890ns (5.592ns logic, 2.298ns route)
+                                       (70.9% logic, 29.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk16M'
+  Total number of paths / destination ports: 88 / 11
+-------------------------------------------------------------------------
+Offset:              7.812ns (Levels of Logic = 4)
+  Source:            MeinLIP/dig_0 (FF)
+  Destination:       seg_n<6> (PAD)
+  Source Clock:      clk16M rising
+
+  Data Path: MeinLIP/dig_0 to seg_n<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.591   0.917  MeinLIP/dig_0 (MeinLIP/dig_0)
+     LUT3:I2->O            1   0.704   0.000  MeinLIP/value<3>2 (MeinLIP/value<3>2)
+     MUXF5:I0->O           7   0.321   0.883  MeinLIP/value<3>_f5 (MeinLIP/value<3>)
+     LUT4:I0->O            1   0.704   0.420  seg_n<0>1 (seg_n_0_OBUF)
+     OBUF:I->O                 3.272          seg_n_0_OBUF (seg_n<0>)
+    ----------------------------------------
+    Total                      7.812ns (5.592ns logic, 2.220ns route)
+                                       (71.6% logic, 28.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.38 secs
+ 
+--> 
+
+Total memory usage is 309920 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

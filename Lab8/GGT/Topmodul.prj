@@ -1,0 +1,3 @@
+verilog work "../LIP_4digit.v"
+verilog work "Steuerung.v"
+verilog work "Topmodul.v"

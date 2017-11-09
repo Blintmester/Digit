@@ -1,0 +1,23 @@
+NET "clk" LOC="P129";
+NET "rst" LOC="P119";
+NET "button"   LOC = "P12";  
+
+# 8 kapcsoló, balról jobbra számozva 
+NET "sw[7]"   LOC = "P47";
+NET "sw[6]"   LOC = "P48"; 
+NET "sw[5]"   LOC = "P69"; 
+NET "sw[4]"   LOC = "P78"; 
+NET "sw[3]"   LOC = "P84"; 
+NET "sw[2]"   LOC = "P89";
+NET "sw[1]"   LOC = "P95"; 
+NET "sw[0]"   LOC = "P101"; 
+
+# 8 LED, balról jobbra számozva
+NET "led[7]"   LOC = "P43"; 
+NET "led[6]"   LOC = "P50"; 
+NET "led[5]"   LOC = "P51"; 
+NET "led[4]"   LOC = "P52"; 
+NET "led[3]"   LOC = "P53"; 
+NET "led[2]"   LOC = "P54"; 
+NET "led[1]"   LOC = "P58"; 
+NET "led[0]"   LOC = "P59";   

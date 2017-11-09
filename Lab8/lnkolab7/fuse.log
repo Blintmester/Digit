@@ -1,0 +1,24 @@
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/Turorudi/Lab8/lnkolab7/gcd1_test_isim_beh.exe -prj D:/Turorudi/Lab8/lnkolab7/gcd1_test_beh.prj work.gcd1_test work.glbl 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Turorudi/Lab8/lnkolab7/gcd1.v" into library work
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 25: <ao> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 27: <clk> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 29: <rst> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 31: <ao> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 33: <ao> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 35: <ao> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 38: <clk> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 40: <rst> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 42: <bo> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 44: <bo> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 47: <ao> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 48: <bo> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 49: <ao> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 60: <clk> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 62: <rst> is not declared.
+ERROR:HDLCompiler:69 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 73: <start> is not declared.
+ERROR:HDLCompiler:598 - "D:/Turorudi/Lab8/lnkolab7/gcd1.v" Line 21: Module <gcd1> ignored due to previous errors.
+Verilog file D:/Turorudi/Lab8/lnkolab7/gcd1.v ignored due to errors

@@ -1,0 +1,31 @@
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodul.ngc Topmodul.ngd  
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodul.ngc Topmodul.ngd  
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodul.ngc Topmodul.ngd  
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodul.ngc Topmodul.ngd  
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodul.ngc Topmodul.ngd  
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodul.ngc Topmodul.ngd  
+map -intstyle ise -p xc3s250e-tq144-4 -cm area -ir off -pr off -c 100 -o Topmodul_map.ncd Topmodul.ngd Topmodul.pcf 
+par -w -intstyle ise -ol high -t 1 Topmodul_map.ncd Topmodul.ncd Topmodul.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Topmodul.twx Topmodul.ncd -o Topmodul.twr Topmodul.pcf -ucf LOGSYS_SP3E.ucf 
+bitgen -intstyle ise -f Topmodul.ut Topmodul.ncd 
+xst -intstyle ise -ifn "D:/Turorudi/Lab8/GGT/Topmodul.xst" -ofn "D:/Turorudi/Lab8/GGT/Topmodul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodul.ngc Topmodul.ngd  
+map -intstyle ise -p xc3s250e-tq144-4 -cm area -ir off -pr off -c 100 -o Topmodul_map.ncd Topmodul.ngd Topmodul.pcf 
+par -w -intstyle ise -ol high -t 1 Topmodul_map.ncd Topmodul.ncd Topmodul.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Topmodul.twx Topmodul.ncd -o Topmodul.twr Topmodul.pcf -ucf LOGSYS_SP3E.ucf 
+bitgen -intstyle ise -f Topmodul.ut Topmodul.ncd 

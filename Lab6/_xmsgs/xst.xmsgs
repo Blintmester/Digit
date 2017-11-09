@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompilers" num="176" delta="old" >Include directory <arg fmt="%s" index="1">\Users\Student\Downloads\Lab6\</arg> does not exist
+</msg>
+
+<msg type="info" file="Xst" num="2546" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Student/Downloads/Lab6/ROM256x8.v</arg>&quot; line <arg fmt="%d" index="2">29</arg>: reading initialization file &quot;<arg fmt="%s" index="3">rom_data256.txt</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="905" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Student/Downloads/Lab6/ROM256x8.v</arg>&quot; line <arg fmt="%d" index="2">32</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;ROM&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">state_bits</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="new" >Signal &lt;<arg fmt="%s" index="1">ROM</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">PatternSearcher/data_d_reg_e/q_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Lab6_1_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;PatternSearcher/.addr_d_reg_e/q_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">PatternSearcher/data_d_reg_e/q_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Lab6_1_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;PatternSearcher/.addr_d_reg_e/q_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">PatternSearcher/data_d_reg_e/q_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Lab6_1_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;PatternSearcher/.addr_d_reg_e/q_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">PatternSearcher/data_d_reg_e/q_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Lab6_1_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;PatternSearcher/.addr_d_reg_e/q_4&gt; </arg>
+</msg>
+
+</messages>
+

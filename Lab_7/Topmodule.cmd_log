@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "D:/Turorudi/Lab_7/Topmodule.xst" -ofn "D:/Turorudi/Lab_7/Topmodule.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab_7/Topmodule.xst" -ofn "D:/Turorudi/Lab_7/Topmodule.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab_7/Topmodule.xst" -ofn "D:/Turorudi/Lab_7/Topmodule.syr" 
+xst -intstyle ise -ifn "D:/Turorudi/Lab_7/Topmodule.xst" -ofn "D:/Turorudi/Lab_7/Topmodule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodule.ngc Topmodule.ngd  
+map -intstyle ise -p xc3s250e-tq144-4 -cm area -ir off -pr off -c 100 -o Topmodule_map.ncd Topmodule.ngd Topmodule.pcf 
+par -w -intstyle ise -ol high -t 1 Topmodule_map.ncd Topmodule.ncd Topmodule.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Topmodule.twx Topmodule.ncd -o Topmodule.twr Topmodule.pcf -ucf LOGSYS_SP3E.ucf 
+bitgen -intstyle ise -f Topmodule.ut Topmodule.ncd 
+xst -intstyle ise -ifn "D:/Turorudi/Lab_7/Topmodule.xst" -ofn "D:/Turorudi/Lab_7/Topmodule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodule.ngc Topmodule.ngd  
+map -intstyle ise -p xc3s250e-tq144-4 -cm area -ir off -pr off -c 100 -o Topmodule_map.ncd Topmodule.ngd Topmodule.pcf 
+par -w -intstyle ise -ol high -t 1 Topmodule_map.ncd Topmodule.ncd Topmodule.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Topmodule.twx Topmodule.ncd -o Topmodule.twr Topmodule.pcf -ucf LOGSYS_SP3E.ucf 
+bitgen -intstyle ise -f Topmodule.ut Topmodule.ncd 
+xst -intstyle ise -ifn "D:/Turorudi/Lab_7/Topmodule.xst" -ofn "D:/Turorudi/Lab_7/Topmodule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LOGSYS_SP3E.ucf -p xc3s250e-tq144-4 Topmodule.ngc Topmodule.ngd  
+map -intstyle ise -p xc3s250e-tq144-4 -cm area -ir off -pr off -c 100 -o Topmodule_map.ncd Topmodule.ngd Topmodule.pcf 
+par -w -intstyle ise -ol high -t 1 Topmodule_map.ncd Topmodule.ncd Topmodule.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Topmodule.twx Topmodule.ncd -o Topmodule.twr Topmodule.pcf -ucf LOGSYS_SP3E.ucf 
+bitgen -intstyle ise -f Topmodule.ut Topmodule.ncd 

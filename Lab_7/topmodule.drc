@@ -1,0 +1,11 @@
+Release 14.6 Drc P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Oct 19 15:51:01 2017
+
+drc -z Topmodule.ncd Topmodule.pcf
+
+WARNING:PhysDesignRules:367 - The signal <bt<0>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

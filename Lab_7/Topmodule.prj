@@ -1,0 +1,6 @@
+verilog work "MUX.v"
+verilog work "Lab5_4/BCDCNT.v"
+verilog work "DEK24.v"
+verilog work "controller_7_Seg.v"
+verilog work "cnt3.v"
+verilog work "Topmodule.v"
